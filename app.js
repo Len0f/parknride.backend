@@ -14,6 +14,19 @@ var app = express();
 // Database connection
 var cors = require("cors");
 app.use(cors());
+app.get("/ping", (req, res) => res.json({ ok: true, time: Date.now() }));
+
+// 404
+app.use((req, res) =>
+  res.status(404).json({ error: "Not Found", path: req.path })
+);
+// 500
+app.use((err, req, res, next) => {
+  console.error(err);
+  res
+    .status(err.status || 500)
+    .json({ error: "Internal", message: err.message });
+});
 
 // Middleware
 app.use(logger("dev"));
