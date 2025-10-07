@@ -1,5 +1,7 @@
 {
   "version": 2,
-  "functions": { "app.js": { "runtime": "nodejs20.x" } },
+  "functions": {
+    "app.js": { "runtime": "nodejs20.x" }
+  },
   "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
 }
