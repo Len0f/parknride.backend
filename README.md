@@ -23,6 +23,8 @@ Frontend : [github.com/Len0f/parknride.frontend](https://github.com/Len0f/parknr
 
 - `bin/` — Point d'entrée du serveur
 - `models/` — Modèles Mongoose
+- `modules/` — Logique métier
+- `public/` — Fichiers statiques
 - `routes/` — Définition des routes Express
 - `app.js` — Configuration Express
 
